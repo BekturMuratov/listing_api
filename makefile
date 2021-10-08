@@ -1,4 +1,4 @@
-makemigrate_api:
+amakemigrate_api:
 	python manage.py makemigrations api
 
 migrate_api:

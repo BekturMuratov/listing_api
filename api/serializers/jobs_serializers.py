@@ -19,7 +19,7 @@ class CreateJobSerializers(serializers.ModelSerializer):
             'slug',
             'phone',
             'website',
-            'social_networks'
+            'social_networks',
             'location',
             'company',
             'salary',
@@ -39,7 +39,27 @@ class UpdateJobSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Listing
-        fields = '__all__'
+        fields = [
+            'id',
+            'name',
+            'description',
+            'category',
+            'image',
+            'thumbnail',
+            'vacancy_type',
+            'qualification',
+            'slug',
+            'phone',
+            'website',
+            'social_networks',
+            'location',
+            'company',
+            'salary',
+            'amenities',
+            'email',
+            'image'
+        ]
+
 
 class GetJobSerializer(serializers.ModelSerializer):
     """Вывод всех вакансии"""
@@ -58,10 +78,11 @@ class GetJobSerializer(serializers.ModelSerializer):
             'slug',
             'phone',
             'website',
-            'social_networks'
+            'social_networks',
             'location',
             'company',
             'salary',
             'amenities',
             'email',
+            'image'
         ]

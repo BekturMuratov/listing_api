@@ -123,10 +123,10 @@ class Listing(BaseModel):
     email = models.CharField(max_length=500, blank=True, null=True)
     website = models.CharField(max_length=500, blank=True, null=True)
     social_networks = models.CharField(max_length=500, blank=True, null=True)
-    price = models.DecimalField(max_digits=12, decimal_places=2)
+    price = models.CharField(max_length=200, blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
     company = models.CharField(max_length=500, blank=True, null=True)
-    salary = models.DecimalField(max_digits=12, decimal_places=2)
+    salary = models.CharField(max_length=200, blank=True, null=True)
 
 
     class Meta:

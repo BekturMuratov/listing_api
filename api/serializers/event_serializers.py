@@ -20,7 +20,7 @@ class CreateEventSerializers(serializers.ModelSerializer):
             'thumbnail',
             'phone',
             'social_networks',
-            'price'
+            'price',
         ]
 
 class DeleteEventSerializer(serializers.ModelSerializer):
@@ -35,7 +35,20 @@ class UpdateEventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Listing
-        fields = '__all__'
+        fields = [
+            'id',
+            'name',
+            'description',
+            'category',
+            'slug',
+            'health_and_safety_measures',
+            'location',
+            'image',
+            'thumbnail',
+            'phone',
+            'social_networks',
+            'price',
+        ]
 
 class GetEventSerializer(serializers.ModelSerializer):
     """Вывод всех мероприятии"""
@@ -54,5 +67,5 @@ class GetEventSerializer(serializers.ModelSerializer):
             'thumbnail',
             'phone',
             'social_networks',
-            'price'
+            'price',
         ]

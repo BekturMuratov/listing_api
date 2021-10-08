@@ -34,7 +34,19 @@ class UpdatePlaceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Listing
-        fields = '__all__'
+        fields = [
+            'id',
+            'name',
+            'description',
+            'category',
+            'amenities',
+            'image',
+            'thumbnail',
+            'location',
+            'phone',
+            'social_networks',
+            'price',
+        ]
 
 class GetPlaceSerializer(serializers.ModelSerializer):
     """Вывод категорий"""
